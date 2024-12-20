@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 import time
 
 # Function to run the script
-def oaey_voter():
+def grace_voter():
     votes = 0
     with sync_playwright() as p:
         # Launch the Chromium browser (set headless=False to see the browser)
@@ -15,7 +15,7 @@ def oaey_voter():
             for j in range(5):
                 context.clear_cookies();
 
-                page.goto("file:///C:/Users/maxwe/Desktop/graey/poll.html")
+                page.goto("https://www.thaiupdate.info/female-star-of-the-year-group-3/")
 
                 # Interact with the page
                 page.locator("id=PDI_answer65586722").check()
@@ -44,4 +44,4 @@ def oaey_voter():
         browser.close()
 
 # Run the script
-oaey_voter()
+grace_voter()
