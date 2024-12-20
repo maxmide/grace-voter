@@ -6,7 +6,7 @@ def grace_voter():
     votes = 0
     with sync_playwright() as p:
         # Launch the Chromium browser (set headless=False to see the browser)
-        browser = p.webkit.launch(headless=True)
+        browser = p.firefox.launch(headless=True)
         context = browser.new_context();
         page = context.new_page()
 
@@ -18,20 +18,20 @@ def grace_voter():
                 page.goto("https://www.thaiupdate.info/female-star-of-the-year-group-3/")
 
                 # Interact with the page
-                page.locator("id=PDI_answer65586722").check()
-                page.locator("id=pd-vote-button14773738").click()
-                page.wait_for_selector("id=PDI_form14773738", timeout=9000)
+                page.locator("id=PDI_answer65709894").check()
+                page.locator("id=pd-vote-button14804257").click()
+                page.wait_for_selector("id=PDI_form14804257", timeout=9000)
 
                 # Extract and calculate the answer
-                expression = page.locator("id=captcha_14773738").text_content()
+                expression = page.locator("id=captcha_14804257").text_content()
                 numbers = [int(num) for num in expression.split() if num.isdigit()]
                 num1 = numbers[0]
                 num2 = numbers[1]
                 answer = num1 + num2
 
                 # Fill in the answer and click the vote button
-                page.locator("id=answer_14773738").fill(str(answer))
-                page.locator("id=pd-vote-button14773738").click()
+                page.locator("id=answer_14804257").fill(str(answer))
+                page.locator("id=pd-vote-button14804257").click()
 
                 votes += 1
                 print("vote count: ", votes)
