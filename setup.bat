@@ -42,7 +42,9 @@ cd ../js-voter
 
 REM Install npm dependencies
 echo Installing npm dependencies...
-npm install
+call npm install
+
+cd ../
 
 REM Notify the user that setup is complete
 echo Setup complete! Everything is installed and ready to go.
