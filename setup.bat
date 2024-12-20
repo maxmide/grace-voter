@@ -47,7 +47,7 @@ call myenv\Scripts\activate
 python -m pip install playwright >nul 2>&1
 python -m playwright install
 
-deactivate
+call deactivate
 
 echo.
 

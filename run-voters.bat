@@ -15,6 +15,10 @@ echo Starting the third voter...
 cd ../js-voter/tests
 start cmd /k run.bat
 
+cd ../..
+
+echo.
+
 REM Final message
 echo All voters are running. Press any key to exit...
 pause >nul
