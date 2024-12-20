@@ -1,0 +1,9 @@
+node_modules/
+*.log
+.env
+
+# Ignore the 'myenv' folder
+virt/myenv/
+
+# Ensure 'virt/script.py' and other files are not ignored
+!virt/*.py
